@@ -1,0 +1,57 @@
+$main: #0038ba;
+$alt: #e8cc18;
+
+:host {
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  nav {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+
+    h1 {
+      font-weight: bold;
+      font-size: 4em;
+      color: black;
+      text-shadow: 0 3px 0 rgba(black, 0.5);
+      text-transform: uppercase;
+      letter-spacing: -3px;
+
+      span {
+        color: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        &:not(:first-of-type) {
+          margin-left: 8px;
+        }
+
+        &.image-link {
+          a {
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+            filter: drop-shadow(0 3px 0 rgba(black, 0.5));
+            transition: 0.2s;
+            img {
+              width: 30px;
+             
+            }
+            &:hover{
+                filter: drop-shadow( 0 5px 5px rgba(0, 0, 0, 0.35));
+              }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+
+<div class="gradient-container" [ngStyle]="gradientStyle">
+
+</div>
+<h2>Generate gradient</h2>
+<p>Choose orientation</p>
+<section class="orientations">
+  <button *ngFor="let o of orientations; let i = index" (click)="setRotate(i)">
+    <span class="button-tooltip">{{o}} ({{i*45}}deg)</span>
+    <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+i*45+'deg)' }">
+  </button>
+</section>
+
