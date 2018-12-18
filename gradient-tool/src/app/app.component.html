@@ -1,14 +1,35 @@
 <app-menu></app-menu>
 
-<div class="gradient-container" [ngStyle]="gradientStyle">
+<div class="gradient-container">
+  <div class="gradient" [ngStyle]="gradientStyle">
 
+  </div>
 </div>
 <h2>Generate gradient</h2>
 <p>Choose orientation</p>
 <section class="orientations">
-  <button *ngFor="let o of orientations; let i = index" (click)="setRotate(i)">
-    <span class="button-tooltip">{{o}} ({{i*45}}deg)</span>
-    <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+i*45+'deg)' }">
+  <button *ngFor="let o of orientations; let i = index" (click)="setRotate(true,i)" class="tooltiper">
+    <span class="tooltip">{{o}} ({{((i*45)+90)}}deg)</span>
+    <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
   </button>
+  <button (click)="setRotate(false,i)" class="tooltiper">
+      <span class="tooltip">radial</span>
+      <img src="../assets/radial.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
+    </button>
 </section>
-
+<section class="colors">
+  <div *ngFor="let c of colors; let i = index">
+    <img src="../assets/can.svg" alt="trash can" tabindex="0" (click)="deleteColor(i)" />
+    <div class="color">
+      <div class="gradient" [ngStyle]="{ 'background-color': c }"></div>
+    </div>
+  </div>
+  <div class="colorpicker tooltiper">
+    <span class="tooltip">Enter here any color format</span>
+    <img src="../assets/plus.svg" alt="trash can" tabindex="0" (click)="addColor(colorname)" />
+    <input type="text" [(ngModel)]="colorname" class="colorhex">
+  </div>
+</section>
+<div class="modal" [class.visible]="showModal">
+  You cannot delete last two colors!
+</div>
