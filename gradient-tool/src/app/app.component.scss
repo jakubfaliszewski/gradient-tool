@@ -10,7 +10,11 @@
   border: 2px solid black;
   border-radius: 3px;
   margin: auto;
-  background-image: /* tint image */ linear-gradient(to right, rgba(192, 192, 192, 0.75), rgba(192, 192, 192, 0.75)), /* checkered effect */ linear-gradient(to right, black 50%, white 50%), linear-gradient(to bottom, black 50%, white 50%);
+  background-image:
+    /* tint image */
+    linear-gradient(to right, rgba(192, 192, 192, 0.75), rgba(192, 192, 192, 0.75)),
+    /* checkered effect */
+    linear-gradient(to right, black 50%, white 50%), linear-gradient(to bottom, black 50%, white 50%);
   background-blend-mode: normal, difference, normal;
   background-size: 2em 2em;
   box-shadow: 0 4px 0 rgba(black, 0.5);
@@ -65,7 +69,7 @@ p {
     &:not(:first-of-type) {
       margin-left: 8px;
     }
-   
+
 
     img {
       width: 26px;
@@ -85,35 +89,42 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
   >div {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
-    &:not(:first-of-type) {
-      margin-left: 6px;
+    
+    >div {
+      &:not(:first-of-type) {
+        margin-left: 6px;
 
-    }
-    &:not(:last-of-type) {
-      img{
+      }
+
+      img {
         transform: scaleY(0);
       }
-      &:hover{
-        img{
+
+      &:hover {
+        img {
           transform: scaleY(1);
         }
       }
+
     }
-    &:last-of-type{
-      img{
+
+    &:last-of-type {
+      img {
         width: 33px;
       }
     }
-    &.colorpicker{
+
+    &.colorpicker {
       flex-direction: row;
-      background: rgba(white,0.5);
+      background: rgba(white, 0.5);
       border-radius: 60px;
       justify-content: center;
     }
@@ -129,7 +140,11 @@ p {
     width: 30px;
     height: 30px;
     border: 2px solid;
-    background-image: /* tint image */ linear-gradient(to right, rgba(192, 192, 192, 0.75), rgba(192, 192, 192, 0.75)), /* checkered effect */ linear-gradient(to right, black 50%, white 50%), linear-gradient(to bottom, black 50%, white 50%);
+    background-image:
+      /* tint image */
+      linear-gradient(to right, rgba(192, 192, 192, 0.75), rgba(192, 192, 192, 0.75)),
+      /* checkered effect */
+      linear-gradient(to right, black 50%, white 50%), linear-gradient(to bottom, black 50%, white 50%);
     background-blend-mode: normal, difference, normal;
     background-size: 2em 2em;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;

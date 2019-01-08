@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,9 @@ export class AppComponent {
     this.setGradient();
 
   }
-
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.colors, event.previousIndex, event.currentIndex);
+  }
   public addColor(colorname) {
     var t = this;
 
