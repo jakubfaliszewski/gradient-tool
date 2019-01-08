@@ -1,15 +1,15 @@
 <app-menu></app-menu>
 
 <div class="gradient-container">
-  <div class="gradient" [ngStyle]="gradientStyle">
-
-  </div>
+  <div class="gradient" [ngStyle]="gradientStyle"></div>
 </div>
+<p>Code</p>
+<code>background-image: {{code}};</code>
 <h2>Generate gradient</h2>
 <p>Choose orientation</p>
 <section class="orientations">
   <button *ngFor="let o of orientations; let i = index" (click)="setRotate(true,i)" class="tooltiper">
-    <span class="tooltip">{{o}} ({{((i*45)+90)}}deg)</span>
+    <span class="tooltip">{{o}} ({{((i*45))}}deg)</span>
     <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
   </button>
   <button (click)="setRotate(false,i)" class="tooltiper">
@@ -32,6 +32,11 @@
     <input type="text" [(ngModel)]="colorname" class="colorhex">
   </div>
 </section>
+<!-- <h2>Presets</h2>
+<p>Use and conquer</p>
+<section class="presets">
+
+</section> -->
 <div class="modal" [class.visible]="showModal">
   You cannot delete last two colors!
 </div>

@@ -13,6 +13,7 @@ export class AppComponent {
   colorname: string = 'orange'
   deg = "linear-gradient(" +0 * 45 +'deg'+ ',';
   gradientStyle;
+  code: string;
   orientations = [
     "bottom",
     "bottom left",
@@ -35,6 +36,7 @@ export class AppComponent {
   }
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.colors, event.previousIndex, event.currentIndex);
+    this.setGradient();
   }
   public addColor(colorname) {
     var t = this;
@@ -60,6 +62,8 @@ export class AppComponent {
     this.gradientStyle = {
       "background-image": deg + colors + ")"
     };
+    this.code = this.gradientStyle["background-image"];
+    console.log(this.code);
   }
   ngOnInit() {
     this.setGradient();
