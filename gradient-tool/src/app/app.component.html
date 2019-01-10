@@ -12,9 +12,9 @@
     <span class="tooltip">{{o}} ({{((i*45))}}deg)</span>
     <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
   </button>
-  <button (click)="setRotate(false,i)" class="tooltiper">
+  <button (click)="setRotate(false,null)" class="tooltiper">
     <span class="tooltip">radial</span>
-    <img src="../assets/radial.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
+    <img src="../assets/radial.svg" alt="arrow icon">
   </button>
 </section>
 <section class="colors" > 
