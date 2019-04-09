@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
   imports: [
     BrowserModule,
     FormsModule,
-    DragDropModule
+    DragDropModule,
+    ColorPickerModule
     ],
   providers: [],
   bootstrap: [AppComponent]

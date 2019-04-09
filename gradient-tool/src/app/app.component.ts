@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
   colors: string[] = ['#0038ba', '#e8cc18'];
   showModal: boolean = false;
   colorname: string = 'orange'
-  deg = "linear-gradient(" +0 * 45 +'deg'+ ',';
+  deg = "linear-gradient(" + 0 * 45 + 'deg' + ',';
   gradientStyle;
   code: string;
   orientations = [
@@ -26,10 +26,10 @@ export class AppComponent {
   ];
   public setRotate(linear, index) {
     if (linear)
-      this.deg = "linear-gradient(" +index * 45 +'deg' + ',';
+      this.deg = "linear-gradient(" + index * 45 + 'deg' + ',';
     else
       this.deg = "radial-gradient("
-      
+
 
     this.setGradient();
 

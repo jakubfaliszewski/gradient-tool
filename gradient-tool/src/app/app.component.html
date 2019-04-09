@@ -27,9 +27,9 @@
     </div>
   </div>
   <div class="colorpicker tooltiper">
-    <span class="tooltip">Enter here any color format</span>
+    <span class="tooltip">Choose your color</span>
     <img src="../assets/plus.svg" alt="trash can" tabindex="0" (click)="addColor(colorname)" />
-    <input type="text" [(ngModel)]="colorname" class="colorhex">
+    <input type="text" class="colorhex" [(colorPicker)]="colorname" [style.background]="colorname" [(ngModel)]="colorname">
   </div>
 </section>
 <!-- <h2>Presets</h2>
