@@ -10,17 +10,17 @@
 <section class="orientations">
   <button *ngFor="let o of orientations; let i = index" (click)="setRotate(true,i)" class="tooltiper">
     <span class="tooltip">{{o}} ({{((i*45))}}deg)</span>
-    <img src="../assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
+    <img src="./assets/arrow.svg" alt="arrow icon" [ngStyle]="{ 'transform': 'rotate('+((i*45)+90)+'deg)' }">
   </button>
   <button (click)="setRotate(false,null)" class="tooltiper">
     <span class="tooltip">radial</span>
-    <img src="../assets/radial.svg" alt="arrow icon">
+    <img src="./assets/radial.svg" alt="arrow icon">
   </button>
 </section>
 <section class="colors" > 
   <div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
     <div *ngFor="let c of colors; let i = index" cdkDrag>
-      <img src="../assets/can.svg" alt="trash can" tabindex="0" (click)="deleteColor(i)" />
+      <img src="./assets/can.svg" alt="trash can" tabindex="0" (click)="deleteColor(i)" />
       <div class="color">
         <div class="gradient" [ngStyle]="{ 'background-color': c }"></div>
       </div>
@@ -28,7 +28,7 @@
   </div>
   <div class="colorpicker tooltiper">
     <span class="tooltip">Choose your color</span>
-    <img src="../assets/plus.svg" alt="trash can" tabindex="0" (click)="addColor(colorname)" />
+    <img src="./assets/plus.svg" alt="trash can" tabindex="0" (click)="addColor(colorname)" />
     <input type="text" class="colorhex" [(colorPicker)]="colorname" [style.background]="colorname" [(ngModel)]="colorname">
   </div>
 </section>
